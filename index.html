@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoExpert | Car Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="header-info">
+                <h1>AutoExpert</h1>
+                <p>Your Specialized Automotive AI</p>
+            </div>
+            <button class="menu-btn"><span class="material-icons">more_vert</span></button>
+        </header>
+        
+        <main class="chat-messages" id="chat-messages">
+            <div class="empty-state" id="empty-state">
+                <span class="material-icons empty-icon">directions_car</span>
+                <h2>Welcome to AutoExpert</h2>
+                <p>Ask me anything about cars, maintenance, and automotive engineering.</p>
+                <div class="example-prompts">
+                    <button class="example-btn">What does the check engine light mean?</button>
+                    <button class="example-btn">How do I change my car's oil?</button>
+                    <button class="example-btn">Explain how a turbocharger works.</button>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="chat-input-area">
+            <div id="image-preview-container" class="hidden">
+                <img id="image-preview" src="" alt="Preview">
+                <button id="remove-image-btn"><span class="material-icons">close</span></button>
+            </div>
+            <div class="input-wrapper">
+                <label for="image-upload" class="upload-btn" id="upload-btn-label">
+                    <span class="material-icons">image</span>
+                </label>
+                <input type="file" id="image-upload" accept="image/jpeg, image/png, image/webp" hidden>
+                
+                <textarea id="message-input" placeholder="Ask about cars or upload an image..." rows="1"></textarea>
+                
+                <button id="send-btn" disabled>
+                    <span class="material-icons">send</span>
+                </button>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
